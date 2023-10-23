@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    
+    <style>
+    
+        body{
+            background-color: rgba(245, 191, 245, 0.534);
+        }
+    
+        h1{
+            color: rgb(37, 6, 212);
+            text-align: center;
+        }
+        h2{
+            color: rgb(19, 153, 158);
+            text-align: center;
+            text-shadow: rgb(83, 56, 50) 1px 1px 0px;
+        }
+
+        div#div1{
+            color: black;
+            text-shadow: rgb(0, 0, 0) 0px 0px 0px;
+        }
+        div#div2{
+            color: black;  
+            text-shadow: cornsilk 1px 1px 0px;
+
+        }
+        div#div3{
+            color: black;
+        }
+        div#div4{
+            color: black;
+        }
+        div#div5{
+            color: black;
+        }
+        div#res{
+            color: rgb(111, 38, 206);
+        }
+        div#resmed{
+            color:rgb(111, 38, 206);
+        }
+        div#resdiv{
+            color: rgb(111, 38, 206);
+        }
+        div#resmul{
+            color:rgb(111, 38, 206);
+        }
+        div#ressub{
+            color:rgb(111, 38, 206);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Web</h1>
+    <h2>Preencha todas as lacunas da operação desejada, caso não tenha valor, coloque o valor de "0"!</h2>
+    <strong><div id="div1">Soma</div> </body></strong>
+    <input type="number" name="i1" id="i1"> +
+    <input type="number" name="i2" id="i2"> +
+    <input type="number" name="i3" id="i3">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div> <br/>
+    <strong><div id="div2"> Média</div> </strong>
+    <input type="number" name="m1" id="m1"> +
+    <input type="number" name="m2" id="m2"> +
+    <input type="number" name="m3" id="m3">
+    <input type="button" value="Calcular" onclick="media()">
+    <div id="resmed">Resultado</div> <br/>
+    <strong><div id="div3">Divisão</div></strong>
+    <input type="number" name="d1" id="d1"> //
+    <input type="number" name="d2" id="d2"> //
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="resdiv">Resultado</div> <br/>
+    <strong><div id="div4">Multiplicação</div></strong>
+    <input type="number" name="mm1" id="mm1"> *
+    <input type="number" name="mm2" id="mm2"> *
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="resmul">Resultado</div> <br/>
+    <strong><div id="div5">Subtração</div></strong>
+    <input type="number" name="t1" id="t1"> -
+    <input type="number" name="t2" id="t2">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="ressub">Resultado</div>
+
+<script>
+       window.alert("Olá seja-bem vindo(a) a calculadora web!")
+    function somar (){
+            var textoi1 = window.document.getElementById("i1") // é o conteudo que colocamos na caixa que é devolvido em texto por isso o numero ti1
+            var textoi2 = window.document.getElementById("i2")
+            var textoi3 = window.document.getElementById("i3")
+            var res = window.document.getElementById("res")
+            var ni1= Number(textoi1.value)
+            var ni2= Number(textoi2.value)
+            var ni3= Number(textoi3.value)
+            var s = ni1 + ni2 + ni3
+            res.innerHTML = `O resultado da sua soma é igual a ${s}`
+        
+        }
+        function media(){
+            var textom1 = window.document.getElementById("m1")
+            var textom2 = window.document.getElementById("m2")
+            var textom3 = window.document.getElementById("m3")
+            var resmed = window.document.getElementById('resmed')
+            var nm1 = Number(textom1.value)
+            var nm2 = Number(textom2.value)
+            var nm3 = Number(textom3.value)
+            var m = (nm1 + nm2 + nm3)/2
+            resmed.innerHTML = `O resultado da sua média é igual a ${m}`
+        }
+        function dividir(){
+            var textod1 = window.document.getElementById("d1")
+            var textod2 = window.document.getElementById("d2")
+            var resdiv = window.document.getElementById("resdiv")
+            var nd1 = Number(textod1.value)
+            var nd2 = Number(textod2.value)
+            var d = (nd1 / nd2)
+            resdiv.innerHTML = ` O resultado da sua divisão é ${d}`
+        }
+       function multiplicar(){
+           var textomm1 = window.document.getElementById("mm1")
+           var textomm2 = window.document.getElementById("mm2")       
+           var resmul = window.document.getElementById("resmul")
+           var nmm1 = Number(textomm1.value)
+           var nmm2 = Number(textomm2.value)
+           var mu = nmm1 * nmm2 
+           resmul.innerHTML = `O resultado da multiplicação é ${mu}`
+       }
+       function subtrair(){
+           var textot1 = window.document.getElementById("t1")
+           var textot2 = document.getElementById("t2")
+           var ressub = document.getElementById("ressub")
+           var nsub1 = Number(textot1.value)
+           var nsub2= Number(textot2.value)
+           var sub = nsub1 - nsub2 
+           ressub.innerHTML = `O resultado da subtração é ${sub}`
+       }
+
+</script>
+</body>
+</html>
